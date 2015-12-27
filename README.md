@@ -12,7 +12,7 @@ Project details can be found on the [main repo.](https://github.com/GoGerard/GoG
 
 ### GerardJS ###
 
-[Screenshot](Screenshot.png)
+![Screenshot](Screenshot.png)
 
 
 The webinterface is written in Front-End Webdevelopment languages like HTML, CSS and Javascript, and is very dependent on:
