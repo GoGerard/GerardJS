@@ -1,0 +1,27 @@
+<div class="ui four column centered doubling stackable grid" style="padding-top: 54px; margin-top: 0px;">
+  <div class="row">
+    <h1 class="ui icon header">
+      <i class="lock  icon"></i>
+      <div class="content">
+        Logout
+        <div class="sub header">Y-you.. know there is no way back r-right?</div>
+      </div>
+    </h1>
+  </div>
+  <div class="column">
+    <form class="ui form segment">
+      <div class="field">
+        <h2 class="ui centered header">
+          You sure? The token will be destroyed!
+        </h2>
+
+      </div>
+      <div class="disabled field">
+        <input name="title" disabled="" value="{{ $root.globals.currentUser.token }}" placeholder="Authentication Token" type="text">
+      </div>
+      <button class="ui fluid big red button" type="submit" ng-click="logout($root.globals.currentUser.token)">Kill me.</button>
+      <div class="ui divider"></div>
+      <a href="#/pictures" class="ui fluid big button">Oh then don't.</a>
+    </form>
+  </div>
+</div>

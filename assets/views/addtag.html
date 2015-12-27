@@ -1,0 +1,27 @@
+<div class="ui four column centered doubling stackable grid" style="padding-top: 54px; margin-top: 0px;">
+  <div class="row">
+    <a class="ui circular button" href="#/pictures">
+      <i class="angle left icon"></i>
+      Back
+    </a>
+  </div>
+  <div class="column">
+    <form class="ui form segment">
+      <div class="field">
+        <label>Title</label>
+        <input name="title" ng-model="tag.name" placeholder="Title" type="text">
+      </div>
+      <button class="ui button" ng-click="Add()" type="submit">Add</button>
+    </form>
+    <div class="ui divider"></div>
+    <div class="field">
+      <div class="ui red basic labels">
+        <a ng-click="Delete(tag.id)"class="ui label" ng-repeat="tag in tags">
+          <i class="remove icon"></i>
+          {{ tag.name }}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

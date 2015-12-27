@@ -1,0 +1,45 @@
+<div class="ui four column centered doubling stackable grid" style="padding-top: 54px; margin-top: 0px;">
+  <div class="row">
+    <a class="ui button" href="#/pictures">
+      <i class="angle left icon"></i>
+      Back
+    </a>
+  </div>
+  <div class="column">
+    <form class="ui form segment">
+      <div class="field">
+        <div class="ui centered card">
+          <div class="content">
+            <div class="header">Tags</div>
+            <div class="description">
+              <div class="ui red basic labels">
+                <a class="ui label" ng-click="Delete(tag.id)" ng-repeat="tag in picture.tags">
+                  <i class="remove icon"></i>
+                  {{ tag.name }}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+              <img class="ui avatar image" ng-src="{{ picture.url }}">
+              {{ picture.title }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui center aligned header">Add Tags:</div>
+        <div class="ui basic labels">
+          <a class="ui label" ng-click="Add(tag.id)" ng-repeat="tag in tags">
+            <i class="add icon"></i>
+            {{ tag.name }}
+          </a>
+        </div>
+
+
+
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="ui five column centered doubling stackable grid" style="padding-top: 54px; margin-top: 0px;">
+  <div class="row">
+    <button class="ui button" ng-click="SearchBox = ''">All</button>
+    <div class="ui input">
+      <input placeholder="Search on tag..." type="text" ng-model="SearchBox.tags.name">
+    </div>
+  </div>
+  <div class="row">
+
+    <!-- Start Mess -->
+    <div class="ui text menu">
+      <div class="header item">Sort By</div>
+      <a class="item" ng-class='{"active":toggle=="-ctime"}' ng-click="toggle='-ctime'" ng-init="toggle='-ctime'">
+        Newest
+      </a>
+      <a class="item" ng-class='{"active":toggle=="ctime"}' ng-click="toggle='ctime'">
+        Oldest
+      </a>
+    </div>
+    <!-- End Mess -->
+
+  </div>
+  <div class="column" ng-repeat="picture in pictures | orderBy:toggle | filter:SearchBox">
+    <picture-card picture="picture"></picture-card>
+  </div>
+</div>

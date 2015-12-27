@@ -1,0 +1,22 @@
+<div class="ui card centered">
+  <div class="image">
+    <img style="max-height: 700px;" ng-src="{{ picture.url }}">
+  </div>
+  <div class="content">
+    <span class="right floated">
+      <a href="#/editpicture/{{ picture.id }}" class="ui icon button">
+        <i class="edit icon"></i>
+      </a>
+    </span>
+    <div class="header">{{ picture.title }}</div>
+    <div class="meta">
+      <span class="date">{{ picture.ctime | date:'dd MMMM yyyy HH:mm:ss' }}</span>
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="tags icon"></i>
+      <a href="#/edittags/{{ picture.id }}" class="ui blue basic label">{{ picture.tags.length }} Tag(s)</a>
+    </a>
+  </div>
+</div>

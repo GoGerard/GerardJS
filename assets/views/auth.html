@@ -1,0 +1,44 @@
+<div class="ui four column centered doubling stackable grid" style="padding-top: 54px; margin-top: 0px;">
+  <div class="row">
+    <h1 class="ui icon header">
+      <i class="unlock alternate icon"></i>
+      <div class="content">
+        Authentication
+        <div class="sub header">Damn, I'm excited, but is it really you?</div>
+      </div>
+    </h1>
+  </div>
+  <div class="column">
+    <form class="ui form segment" ng-submit="login()">
+      <div class="field">
+        <h1 class="ui centered header">
+          How do I get in?
+        </h1>
+        <div class="ui negative message transition" ng-show="error">
+          <div class="header">
+            Something went wrong!
+          </div>
+          <p>{{ error}}
+          </p>
+        </div>
+
+        <div class="ui ordered list">
+          <div class="item">Start Discord</div>
+          <div class="item">Get into the ELCO Discord server</div>
+          <div class="item">Request token by sending
+            <i>!token</i>
+          </div>
+          <div class="item">Paste token into the form and login!</div>
+          <div class="item">Enjoy life!</div>
+
+        </div>
+
+      </div>
+      <div class="field">
+        <input name="title" ng-model="token" placeholder="Authentication Token" type="text">
+      </div>
+
+      <button class="ui fluid big primary ng-class:{ 'loading': dataLoading }; button" type="submit">Login</button>
+    </form>
+  </div>
+</div>

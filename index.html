@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.4.8/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.4.8/angular-cookies.min.js"></script>
+
+  <!-- SemanticUI -->
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/gerard.css">
+  <script src="semantic/dist/semantic.min.js"></script>
+
+  <title>GoGerard</title>
+</head>
+
+<body ng-app="GoGerard">
+  <!-- MENU -->
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <div class="ui simple dropdown item">
+        <img class="ui avatar image" src="assets/images/icon.png"> GoGerard<i class="dropdown icon"></i>
+        <div class="menu">
+          <a href="#/" class="ui item">Home</a>
+          <a href="#/pictures" class="ui item">Pictures</a>
+          <a href="#/logout" class="ui item">Logout</a>
+        </div>
+      </div>
+      <a href="#/addpicture" class="item">
+        <i class="add circle icon"></i> Picture
+      </a>
+      <a href="#/addtag" class="item">
+        <i class="add circle icon"></i> Tag
+      </a>
+    </div>
+  </div>
+
+
+
+  <!-- VIEW CONTAINER -->
+  <div ng-view></div>
+
+
+
+  <!-- Modules -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- Directives -->
+  <script src="assets/js/directives/PictureCard.js"></script>
+  <script src="assets/js/directives/NewPictureCard.js"></script>
+
+  <!-- Controllers -->
+  <script src="assets/js/controllers/ListController.js"></script>
+  <script src="assets/js/controllers/EditPictureController.js"></script>
+  <script src="assets/js/controllers/EditTagsController.js"></script>
+  <script src="assets/js/controllers/AddPictureController.js"></script>
+  <script src="assets/js/controllers/AuthController.js"></script>
+  <script src="assets/js/controllers/LogoutController.js"></script>
+  <script src="assets/js/controllers/TagController.js"></script>
+
+
+  <!-- Services -->
+  <script src="assets/js/services/Pictures.js"></script>
+  <script src="assets/js/services/Tags.js"></script>
+  <script src="assets/js/services/Auth.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<div class="ui four column centered doubling stackable grid" style="padding-top: 54px; margin-top: 0px;">
+  <div class="row">
+    <a class="ui button" href="#/pictures">
+      <i class="angle left icon"></i>
+      Back
+    </a>
+    <button class="ui negative button" ng-click="Delete()">
+      <i class="remove icon"></i>
+      Delete
+    </button>
+  </div>
+
+
+  <div class="column">
+    <form class="ui form segment">
+      <div class="field">
+        <picture-card picture="picture"></picture-card>
+      </div>
+      <div class="field">
+        <label>Title</label>
+        <input name="title" ng-model="picture.title" type="text">
+      </div>
+      <div class="field">
+        <label>URL</label>
+        <input name="url" ng-model="picture.url" type="text">
+      </div>
+      <button class="ui button" type="submit" ng-click="Update()">Update</button>
+    </form>
+  </div>
+</div>
