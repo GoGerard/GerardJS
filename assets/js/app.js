@@ -1,5 +1,5 @@
 var app = angular.module('GoGerard', ['ngRoute', 'ngCookies']);
-var api_prefix = '';
+var api_prefix = 'http://192.168.99.100:8080'; //Might be docker default IP, but check using 'docker-machine ip default'
 
 app.config(function($routeProvider) {
   $routeProvider
